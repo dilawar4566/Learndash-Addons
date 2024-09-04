@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
-    $(".wpProQuiz_points").each(function() {
-        var pointsText = $(this).html();
+    jQuery(".wpProQuiz_points").each(function() {
+        var pointsText = jQuery(this).html();
 
         // Replace the text as required
         var updatedText = pointsText.replace("You have reached", "You have scored");
@@ -8,7 +8,7 @@ jQuery(document).ready(function ($) {
         updatedText = updatedText.replace("points", "point");
 
         // Update the element's HTML
-        $(this).html(updatedText);
+        jQuery(this).html(updatedText);
     });
 
  const interval = setInterval(function () {
@@ -75,36 +75,36 @@ jQuery(document).ready(function ($) {
 }, 500); // Polling interval
 
 
-  $(".spald-ps__item ").addClass("spald-ps__item--is-active");
-  $(".spald-ps__item--is-active").removeClass("spald-ps__item");
+  jQuery(".spald-ps__item ").addClass("spald-ps__item--is-active");
+  jQuery(".spald-ps__item--is-active").removeClass("spald-ps__item");
 
-  $('input.link_child_input[name="password"]').val("").attr("type", "password");
+  jQuery('input.link_child_input[name="password"]').val("").attr("type", "password");
 
   // Add the eye icon to each password field
-  $('input[type="password"], input[name="password"]').each(function () {
+  jQuery('input[type="password"], input[name="password"]').each(function () {
     // Wrap the password field in a div to append the eye icon
-    $(this).wrap(
+    jQuery(this).wrap(
       '<div class="password-wrapper" style="position: relative;"></div>'
     );
 
     // Create and append the eye icon
-    var eyeIcon = $(
+    var eyeIcon = jQuery(
       '<span class="toggle-password" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">👁️</span>'
     );
-    $(this).after(eyeIcon);
+    jQuery(this).after(eyeIcon);
   });
 
   // Toggle password visibility on icon click
-  $(document).on("click", ".toggle-password", function () {
-    var passwordInput = $(this).siblings(
+  jQuery(document).on("click", ".toggle-password", function () {
+    var passwordInput = jQuery(this).siblings(
       'input[type="password"], input[type="text"]'
     );
     if (passwordInput.attr("type") === "password") {
       passwordInput.attr("type", "text");
-      $(this).text("🙈");
+      jQuery(this).text("🙈");
     } else {
       passwordInput.attr("type", "password");
-      $(this).text("👁️");
+      jQuery(this).text("👁️");
     }
   });
 });
@@ -203,13 +203,13 @@ jQuery(document).ready(function () {
 
 jQuery(document).ready(function ($) {
   // When the checkbox state changes
-  $('input[name="grading-visibility"]').change(function () {
-    var $successMessage = $(this).closest('div').find('.success_message');
+  jQuery('input[name="grading-visibility"]').change(function () {
+    var $successMessage = jQuery(this).closest('div').find('.success_message');
     $successMessage.fadeIn();
     $successMessage.html("Updating...");
-    var isChecked = $(this).is(":checked");
+    var isChecked = jQuery(this).is(":checked");
     var visibility = isChecked ? "visible" : "hidden";
-    var student_id = $(this).attr("data-student-id");
+    var student_id = jQuery(this).attr("data-student-id");
 
     // Make an AJAX request to update grading visibility
     $.ajax({
@@ -235,10 +235,10 @@ jQuery(document).ready(function ($) {
 
 jQuery(document).ready(function($) {
   // Open the popup
-  $('.edit_profile').on('click', function() {
-      $('#user-update-popup').show();
-      var userId = $(this).data('student-id');
-      $('#user-id').val(userId);
+  jQuery('.edit_profile').on('click', function() {
+      jQuery('#user-update-popup').show();
+      var userId = jQuery(this).data('student-id');
+      jQuery('#user-id').val(userId);
       
       // Fetch existing user data
       $.ajax({
@@ -250,11 +250,11 @@ jQuery(document).ready(function($) {
           },
           success: function(response) {
               if(response.success) {
-                  $('#first-name').val(response.data.first_name);
-                  $('#last-name').val(response.data.last_name);
-                  $('#date-of-birth').val(response.data.date_of_birth);
+                  jQuery('#first-name').val(response.data.first_name);
+                  jQuery('#last-name').val(response.data.last_name);
+                  jQuery('#date-of-birth').val(response.data.date_of_birth);
                   // The profile image can be handled with a preview
-                  $('#profile-image-preview').attr('src', response.data.profile_image);
+                  jQuery('#profile-image-preview').attr('src', response.data.profile_image);
               } else {
                   alert('Failed to load user data');
               }
@@ -266,12 +266,12 @@ jQuery(document).ready(function($) {
   });
 
   // Close the popup
-  $('.close').on('click', function() {
-      $('#user-update-popup').hide();
+  jQuery('.close').on('click', function() {
+      jQuery('#user-update-popup').hide();
   });
 
   // Form submission
-  $('#update-user-form').on('submit', function(e) {
+  jQuery('#update-user-form').on('submit', function(e) {
       e.preventDefault();
 
       var formData = new FormData(this);
@@ -284,7 +284,7 @@ jQuery(document).ready(function($) {
           success: function(response) {
             console.log(response);
               alert('Profile updated successfully');
-              $('#user-update-popup').hide();
+              jQuery('#user-update-popup').hide();
               // Optionally handle the response or refresh the page
           },
           error: function() {
