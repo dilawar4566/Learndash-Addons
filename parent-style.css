@@ -1,0 +1,459 @@
+.profile-card {
+  /* width: 400px; */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  background-color: #266cd2;
+  padding: 20px;
+  color: #ffffff;
+}
+.ld-expand-button {
+    display: none !important;
+}
+.profile-avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.profile-info h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.profile-info p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.grading-toggle {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.grading-toggle span {
+  margin-right: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 28px;
+  margin: 5px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  border: 1px solid #266cd2;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 6px;
+  bottom: 2px;
+  background-color: #266cd2;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(35px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+input:checked+.slider:before {
+  transform: translateX(36px);
+}
+
+.progress-list {
+  padding: 0px 15px;
+  /* max-width: 50%; */
+}
+
+.progress-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.success_message {
+  display: none;
+  margin: 5px;
+  color: black;
+  font-size: 15px;
+}
+p.ld-dashboard-message {
+  color: black;
+}
+.progress-bar {
+  position: relative;
+  width: 30%;
+  background-color: #e0e0e0;
+  height: 20px !important;
+  border-radius: 10px;
+  margin: 0 15px;
+  border: 1px solid;
+}
+
+.progress-fill {
+  background-color: #2962ff;
+  height: 100%;
+  border-radius: 25px;
+}
+
+.progress-text {
+  position: absolute;
+  right: 10px;
+  font-size: 12px;
+  top: 0px;
+  color: #000000;
+}
+
+.view-graphs {
+  color: #2962ff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.grading_switch {
+  display: flex;
+  text-align: center;
+  flex: space-between;
+  padding: 20px;
+  margin-bottom: 30px;
+  /* border: 1px solid gray; */
+  box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 21%);
+}
+
+.parent_dashboard_shortcode .spald-ps__container {
+  margin: 0px !important;
+}
+
+.grading_switch h2 {
+  margin-right: 20px;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.progress-list h2 {
+  font-size: 18px;
+}
+
+.span_title {
+  margin: 5px;
+}
+
+/* Popup container hidden by default */
+.popup {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black background with transparency */
+}
+
+/* Popup content */
+.popup-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 750px;
+  /* Maximum width */
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.student-card {
+  border: 1px solid gray;
+  padding: 30px 0px;
+}
+.assignments {
+  /* width: 700px; */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.assignments h2 {
+  color: #004488;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.assignment {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 2px solid;
+  padding: 15px;
+  width: 100%;
+  border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+  border-radius: 5px;
+}
+
+.assignment:last-child {
+  margin-bottom: 0;
+}
+
+.icon img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.details {
+  flex-grow: 1;
+}
+
+.details h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #004488;
+}
+
+.progress {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.complete {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.progress-bar {
+  width: 200px;
+  height: 10px;
+  background-color: #E0E0E0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #FFA500;
+  border-radius: 5px;
+}
+
+.action {
+  margin-left: 20px;
+}
+
+.override-button {
+  padding: 15px 50px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.continue {
+  background-color: #FFD700;
+  color: #000;
+}
+
+button.retake {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+button.start {
+  background-color: #28A745;
+  color: #fff;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+.hide_below_section{
+  display: none;
+}
+.edit_profile, .assign_grade {
+  position: absolute;
+  right: 50px;
+  background: #007BFF;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-size: 15px;
+  cursor: pointer;
+}
+.edit_profile:hover, .assign_grade:hover {
+ background-color: #FFD700;
+}
+.popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.group {
+  margin: 10px;
+}
+#update-user-form label, #update-user-form input {
+  width: 100%;
+  display: flex;
+}
+/* date field width auto */
+#update-user-form input[type="date"] {
+  width: auto;
+}
+
+.popup-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.login-username:before, .login-password:before {
+	left:1.5em !important;
+	top: 2em !important;
+	z-index:2;
+}
+.video-class {
+	width:100% !important;
+	height:auto !important;
+}
+span.assign_grade {
+  right: 150px;
+}
+@media screen and (max-width: 600px) {
+  .assignments {	
+    padding: 10px;
+}
+	.assignment{
+		padding:10px;
+	}
+	.icon img {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+	.details h3 {
+  
+    font-size: 12px;
+}
+	.override-button {
+    padding: 8px 15px;
+    font-size: 10px;
+}
+	.grading_switch{
+		padding:5px;
+	}
+	.grading_switch h2 {
+    margin-right: 9px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+	.progress-bar {
+    width: 100px;
+}
+	.progress-item span {
+    font-size: 10px;
+}
+	.success_message {
+    /* display: none; */
+    margin: 5px;
+    color: black;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 50px;
+}
+	.edit_profile, .assign_grade {
+    padding: 5px 5px;
+    font-size: 12px;
+}
+	.ld-expand-button.ld-button-alternate.ld-mobile-only {
+    display: none !important;
+}
+span.assign_grade {
+  margin-top: 50px;
+  right: 50px;
+}
+}
